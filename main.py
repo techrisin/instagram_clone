@@ -7,8 +7,11 @@ from libs.screens.home_page import HomePage
 
 class InstagramApp(MDApp):
     def build(self):
-        Window.size = [300, 600]
+        # Window.size = [300, 500]
+        # self.theme_cls.theme_style = "Dark"
+        # self.theme_cls.primary_palette = "Red"
         self.load_all_kv_files()
+        # self.dispatch('on_enter') 
         return HomePage()
     
     def load_all_kv_files(self):
@@ -20,8 +23,12 @@ class InstagramApp(MDApp):
         Builder.load_file('libs/components/post_card.kv')
     
     def on_start(self):
-        self.root.dispatch('on_enter')
+        super().on_start()
+        print('Executing enter')
+
+        v=1
+        self.root.dispatch('on_enter') 
 
 
 if __name__ == "__main__":
-    InstagramApp().run()
+    InstagramApp().run() 

@@ -5,12 +5,14 @@ import json
 from libs.components.post_card import PostCard
 
 from libs.components.circular_avatar_image import CircularAvatarImage
-
+from libs.components.story_creator import StoryCreator 
 
 class HomePage(MDScreen):
-    profile_picture = 'https://images.unsplash.com/photo-1623065691913-e9a650810efd?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    #profile_picture = 'https://images.unsplash.com/photo-1623065691913-e9a650810efd?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    profile_picture = 'assets/images/vinayagar.jpg'
 
     def on_enter(self):
+        v = 1
         self.list_stories()
         self.list_posts()
 
